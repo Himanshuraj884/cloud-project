@@ -1,0 +1,75 @@
+name: ci
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: "Release holding the model asset (v1 = trained student, baseline-untrained = deliberately bad model)"
+        default: v1
+      asset_name:
+        description: "Asset file name"
+        default: model-v1.tar.gz
+
+env:
+  RELEASE_TAG: ${{ github.event.inputs.release_tag || 'v1' }}
+  ASSET_NAME: ${{ github.event.inputs.asset_name || 'model-v1.tar.gz' }}
+
+jobs:
+  secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: pip install ruff==0.6.9
+      - run: ruff check .
+
+  unit-tests:
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: pip install pytest==8.3.3 httpx==0.27.2 fastapi==0.115.0 boto3==1.35.30
+      - run: python -m pytest -q
+
+  evaluate:
+    needs: unit-tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: pip install -r training/requirements.txt fastapi==0.115.0 boto3==1.35.30
+      - name: Download model from the GitHub Release
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          gh release download "$RELEASE_TAG" --pattern "$ASSET_NAME" --dir dist
+          mkdir -p model && tar -xzf "dist/$ASSET_NAME" -C model
+      - name: Generate predictions on validation.jsonl
+        run: python eval/run_student.py model data/validation.jsonl results/ci_predictions.jsonl
+      - name: Score (report only)
+        run: python tools/score.py results/ci_predictions.jsonl data/validation.jsonl --out results/ci_report.json
+      - uses: actions/upload-artifact@v4
+        with: {name: eval-results, path: results/ci_*}
+
+  quality-gate:
+    needs: evaluate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: {name: eval-results, path: results}
+      - name: Gate, JSON validity must be at least 95%
+        run: python tools/score.py results/ci_predictions.jsonl data/validation.jsonl --min-validity 95

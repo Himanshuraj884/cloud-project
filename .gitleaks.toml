@@ -1,0 +1,3 @@
+# Defaults only; the repository contains no credentials (Secrets are generated inside the cluster).
+[extend]
+useDefault = true

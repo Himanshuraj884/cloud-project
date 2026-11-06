@@ -1,0 +1,20 @@
+# Everything `make train` needs. Nothing else is read.
+model_version: v1
+base_model: EleutherAI/pythia-70m
+train_file: data/train.jsonl          # first 1,500 records of datasets/v1/train.jsonl
+max_records: 1500
+seed: 42
+learning_rate: 5.0e-4
+batch_size: 16
+epochs: 5
+max_seq_length: 96
+weight_decay: 0.0
+warmup_ratio: 0.05
+output_dir: artifacts/v1
+loss_csv: training/loss.csv
+library_versions:                     # train.py refuses to run if the installed versions differ
+  python: "3.12"
+  torch: "2.4.1"
+  transformers: "4.44.2"
+  numpy: "1.26.4"
+  pyyaml: "6.0.2"

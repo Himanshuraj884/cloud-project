@@ -1,0 +1,9 @@
+.git
+artifacts
+dist
+results
+models
+*.safetensors
+*.bin
+__pycache__
+.venv
