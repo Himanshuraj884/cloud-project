@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Content-Length: 74
+Content-Type: application/json
+Date: Sat, 07 Nov 2026 16:44:20 GMT
+Server: uvicorn
+X-Model-Version: v1
+X-Served-By: parser-5b59d7d6fb-9bkql
+
+{"intent": "weather_query", "date": null, "time": null, "place": "london"}
