@@ -1,0 +1,18 @@
+{
+  "model_version": "v1",
+  "base_model": "EleutherAI/pythia-70m",
+  "seed": 42,
+  "learning_rate": 0.0005,
+  "batch_size": 16,
+  "epochs": 5,
+  "max_seq_length": 96,
+  "records_used": 1500,
+  "library_versions": {
+    "python": "3.12",
+    "torch": "2.4.1",
+    "transformers": "4.44.2",
+    "numpy": "1.26.4",
+    "pyyaml": "6.0.2"
+  },
+  "final_train_loss": 0.045877522736787794
+}
