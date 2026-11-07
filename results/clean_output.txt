@@ -1,0 +1,11 @@
+scripts/with_s3.sh python3 worker/clean.py
+{
+  "input": 3000,
+  "a_invalid_json": 2417,
+  "b_bad_keys": 0,
+  "c_bad_intent": 2,
+  "d_bad_slot": 44,
+  "duplicates": 12,
+  "kept": 525
+}
+42a6fc83d157c717233a81bf6dd16015040991c58cc74da701d30bfe09726187  train.jsonl
