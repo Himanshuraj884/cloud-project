@@ -7,7 +7,8 @@ Standard load test (use a longer --run-time when something is changed during the
     kubectl -n app rollout restart deploy/parser; kubectl -n app get endpoints parser -w   # empty while the model loads
 
 ## HPA scale up/down (Task 4.4)  - the HPA must be on; start from 1 replica
-    kubectl -n app get hpa,pods -w | tee results/hpa_watch.txt      # in one terminal; run the load test in another
+    while true; do echo "$(date +%T) cpu=$(kubectl -n app get hpa parser -o jsonpath='{.status.currentMetrics[0].resource.current.averageUtilization}')% current=$(kubectl -n app get hpa parser -o jsonpath='{.status.currentReplicas}') desired=$(kubectl -n app get hpa parser -o jsonpath='{.status.desiredReplicas}') ready_pods=$(kubectl -n app get deploy parser -o jsonpath='{.status.readyReplicas}')"; sleep 10; done | tee results/hpa_watch.txt
+    # in one terminal; run the load test in another
 Limitation to state: one node, one machine; metrics-server on a laptop reports noisy CPU; no real node-level scaling.
 
 ## Rolling update then rollback (Task 4.5), during a longer load test (--run-time 6m)

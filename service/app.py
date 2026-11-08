@@ -10,6 +10,7 @@ import threading
 
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse, Response
+from starlette.concurrency import run_in_threadpool
 
 from service.validate import parse_output
 
@@ -57,6 +58,11 @@ def readyz():
     return JSONResponse({"status": "loading", "error": STATE["error"]}, status_code=503)
 
 
+def _generate_locked(text):
+    with _LOCK:  # one generation at a time (bounded CPU/memory); runs in a worker thread
+        return STATE["generate"](text)
+
+
 @app.post("/parse")
 async def parse(request: Request):
     try:
@@ -69,8 +75,9 @@ async def parse(request: Request):
     if not STATE["ready"]:
         return JSONResponse({"error": "model_not_ready"}, status_code=503)
 
-    with _LOCK:
-        raw = STATE["generate"](text)
+    # Generation is CPU-bound and blocking. It must not run on the event loop, otherwise /readyz and
+    # /healthz cannot be answered while a request is being generated and the probes time out.
+    raw = await run_in_threadpool(_generate_locked, text)
     if os.environ.get("FAULT_INJECT") == "1":
         raw = "not json"
     obj = parse_output(raw)
