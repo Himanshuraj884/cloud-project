@@ -1,0 +1,5 @@
+success  secrets
+success  lint
+success  unit-tests
+success  evaluate
+failure  quality-gate
