@@ -3,7 +3,7 @@ model_version: v2
 base_model: EleutherAI/pythia-70m
 train_file: data/train.jsonl          # first 1,500 records of datasets/v1/train.jsonl
 max_records: 1500
-seed: 43
+seed: 44
 learning_rate: 5.0e-4
 batch_size: 16
 epochs: 6
