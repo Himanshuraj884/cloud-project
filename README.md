@@ -1,7 +1,7 @@
 # Distilling a command parser (Phi-3.5 -> Pythia-70M) on a local k3d cloud
 
-GitHub repository: **<PASTE YOUR GITHUB REPO LINK HERE>**   (tag `final`)
-Release with model assets: **<PASTE RELEASE LINK HERE>**
+GitHub repository: **https://github.com/Himanshuraj884/cloud-project**   (tag `final`)
+Release with model assets: **https://github.com/Himanshuraj884/cloud-project/releases/tag/v1**
 Name / roll number: **Himanshu Raj / 230101084**
 
 ## Prerequisites
