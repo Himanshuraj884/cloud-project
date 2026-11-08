@@ -1,0 +1,8 @@
+TRANSCRIBED by hand from the terminal output of the Locust run that ended 2026-11-08 16:35:55
+(one Pod, parser-7bc4d8f796-68sh8, deleted at 16:34:09 during the run; Locust --run-time 3m; events in results/recovery_events.txt).
+Aggregated: 856 requests, 0 failures (0.00%), avg 837 ms, median 1100 ms, max 1750 ms (see results/recovery_stats.csv)
+per_replica:
+  parser-7bc4d8f796-ssmjt: 436
+  parser-7bc4d8f796-68sh8: 182   (the deleted Pod, served before deletion)
+  parser-7bc4d8f796-967j8: 238   (its replacement)
+per_model_version: v1: 856

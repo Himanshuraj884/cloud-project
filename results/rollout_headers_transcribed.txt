@@ -1,0 +1,12 @@
+TRANSCRIBED by hand from the terminal output of the Locust run that ended 2026-11-08 16:20:01
+(rolling update v1->v2 at 16:13:31, rollout undo at 16:15:49, --run-time 8m, command in results/rollout_events.txt).
+Locust wrote the header counts to results/loadtest_headers.json, which later runs overwrote, so this file is a copy of what the terminal printed.
+Aggregated: 2354 requests, 0 failures (0.00%), avg 814 ms, median 820 ms, max 1679 ms (see results/rollout_stats.csv)
+per_replica:
+  parser-7bc4d8f796-dzzqh: 244   (v1, original)
+  parser-7bc4d8f796-9t65c: 263   (v1, original)
+  parser-68b8d94d86-zwdkb: 362   (v2)
+  parser-68b8d94d86-j86vq: 327   (v2)
+  parser-7bc4d8f796-ssmjt: 589   (v1, after rollback)
+  parser-7bc4d8f796-68sh8: 569   (v1, after rollback)
+per_model_version: v1: 1665, v2: 689
