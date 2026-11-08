@@ -10,12 +10,17 @@ spec:
   template:
     metadata: {labels: {app: parser}}
     spec:
+      terminationGracePeriodSeconds: 40
       containers:
         - name: parser
           image: parser-service:local
           imagePullPolicy: IfNotPresent
           ports:
             - {containerPort: 8000}
+          lifecycle:
+            # keep serving while the Service/Ingress stop routing to this Pod, then SIGTERM (zero-downtime updates)
+            preStop:
+              exec: {command: ["sleep", "10"]}
           env:
             - {name: MODEL_URI, value: "s3://models/v1/"}
             - {name: MODEL_VERSION, value: "v1"}

@@ -1,0 +1,45 @@
+NAME                      READY   STATUS    RESTARTS   AGE
+parser-7bc4d8f796-68sh8   1/1     Running   0          18m
+parser-7bc4d8f796-ssmjt   1/1     Running   0          18m
+== 16:34:09 deleting parser-7bc4d8f796-68sh8
+pod "parser-7bc4d8f796-68sh8" deleted from app namespace
+16:34:09 ready=2 | parser-7bc4d8f796-68sh8 1/1 Terminating;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:34:12 ready=1 | parser-7bc4d8f796-68sh8 1/1 Terminating;parser-7bc4d8f796-967j8 0/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:34:14 ready=1 | parser-7bc4d8f796-68sh8 1/1 Terminating;parser-7bc4d8f796-967j8 0/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:34:16 ready=2 | parser-7bc4d8f796-68sh8 1/1 Terminating;parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:34:18 ready=2 | parser-7bc4d8f796-68sh8 1/1 Terminating;parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:34:21 ready=2 | parser-7bc4d8f796-68sh8 1/1 Terminating;parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:34:23 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:34:25 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:34:28 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:34:30 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:34:32 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:34:34 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:34:36 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:34:39 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:34:41 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:34:43 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:34:45 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:34:47 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:34:49 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:34:52 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:34:54 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:34:56 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:34:59 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:35:01 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:35:03 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:35:05 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:35:07 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:35:10 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:35:12 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:35:14 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:35:16 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:35:19 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:35:21 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:35:23 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:35:25 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:35:28 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:35:30 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:35:33 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:35:35 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:35:37 ready=2 | parser-7bc4d8f796-967j8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;

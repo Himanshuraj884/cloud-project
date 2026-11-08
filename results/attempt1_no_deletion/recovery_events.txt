@@ -1,0 +1,35 @@
+NAME                      READY   STATUS    RESTARTS   AGE
+parser-7bc4d8f796-68sh8   1/1     Running   0          9m29s
+parser-7bc4d8f796-ssmjt   1/1     Running   0          9m37s
+== 16:25:27 deleting one pod
+error: there is no need to specify a resource type as a separate argument when passing arguments in resource/name form (e.g. 'kubectl get resource/<resource_name>' instead of 'kubectl get resource resource/<resource_name>'
+16:25:27 ready=2 | parser-7bc4d8f796-68sh8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:25:29 ready=2 | parser-7bc4d8f796-68sh8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:25:31 ready=2 | parser-7bc4d8f796-68sh8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:25:33 ready=2 | parser-7bc4d8f796-68sh8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:25:36 ready=2 | parser-7bc4d8f796-68sh8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:25:38 ready=2 | parser-7bc4d8f796-68sh8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:25:40 ready=2 | parser-7bc4d8f796-68sh8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:25:42 ready=2 | parser-7bc4d8f796-68sh8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:25:45 ready=2 | parser-7bc4d8f796-68sh8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:25:47 ready=2 | parser-7bc4d8f796-68sh8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:25:49 ready=2 | parser-7bc4d8f796-68sh8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:25:51 ready=2 | parser-7bc4d8f796-68sh8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:25:54 ready=2 | parser-7bc4d8f796-68sh8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:25:56 ready=2 | parser-7bc4d8f796-68sh8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:25:59 ready=2 | parser-7bc4d8f796-68sh8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:26:01 ready=2 | parser-7bc4d8f796-68sh8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:26:03 ready=2 | parser-7bc4d8f796-68sh8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:26:05 ready=2 | parser-7bc4d8f796-68sh8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:26:08 ready=2 | parser-7bc4d8f796-68sh8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:26:10 ready=2 | parser-7bc4d8f796-68sh8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:26:12 ready=2 | parser-7bc4d8f796-68sh8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:26:14 ready=2 | parser-7bc4d8f796-68sh8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:26:17 ready=2 | parser-7bc4d8f796-68sh8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:26:19 ready=2 | parser-7bc4d8f796-68sh8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:26:21 ready=2 | parser-7bc4d8f796-68sh8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:26:23 ready=2 | parser-7bc4d8f796-68sh8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:26:26 ready=2 | parser-7bc4d8f796-68sh8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:26:28 ready=2 | parser-7bc4d8f796-68sh8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:26:30 ready=2 | parser-7bc4d8f796-68sh8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;
+16:26:32 ready=2 | parser-7bc4d8f796-68sh8 1/1 Running;parser-7bc4d8f796-ssmjt 1/1 Running;

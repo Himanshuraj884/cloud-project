@@ -1,0 +1,42 @@
+16:42:21
+parser-7bc4d8f796-967j8   4m    340Mi   
+parser-7bc4d8f796-ssmjt   4m    349Mi   
+16:42:31
+parser-7bc4d8f796-967j8   4m    340Mi   
+parser-7bc4d8f796-ssmjt   4m    349Mi   
+16:42:41
+parser-7bc4d8f796-967j8   4m    340Mi   
+parser-7bc4d8f796-ssmjt   4m    349Mi   
+16:42:51
+parser-7bc4d8f796-967j8   4m    340Mi   
+parser-7bc4d8f796-ssmjt   4m    349Mi   
+16:43:01
+parser-7bc4d8f796-967j8   365m   340Mi   
+parser-7bc4d8f796-ssmjt   877m   349Mi   
+16:43:11
+parser-7bc4d8f796-967j8   964m    341Mi   
+parser-7bc4d8f796-ssmjt   1000m   349Mi   
+16:43:21
+parser-7bc4d8f796-967j8   964m    341Mi   
+parser-7bc4d8f796-ssmjt   1000m   349Mi   
+16:43:31
+parser-7bc4d8f796-967j8   946m    341Mi   
+parser-7bc4d8f796-ssmjt   1000m   350Mi   
+16:43:41
+parser-7bc4d8f796-967j8   951m    341Mi   
+parser-7bc4d8f796-ssmjt   1000m   349Mi   
+16:43:52
+parser-7bc4d8f796-967j8   951m    341Mi   
+parser-7bc4d8f796-ssmjt   1000m   349Mi   
+16:44:02
+parser-7bc4d8f796-967j8   955m    341Mi   
+parser-7bc4d8f796-ssmjt   1000m   349Mi   
+16:44:12
+parser-7bc4d8f796-967j8   941m    341Mi   
+parser-7bc4d8f796-ssmjt   1000m   349Mi   
+16:44:22
+parser-7bc4d8f796-967j8   941m    341Mi   
+parser-7bc4d8f796-ssmjt   1000m   349Mi   
+16:44:32
+parser-7bc4d8f796-967j8   940m    341Mi   
+parser-7bc4d8f796-ssmjt   1000m   350Mi   

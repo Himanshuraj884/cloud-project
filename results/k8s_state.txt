@@ -1,0 +1,15 @@
+NAME                     READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES                 SELECTOR
+deployment.apps/parser   2/2     2            2           18h   parser       parser-service:local   app=parser
+
+NAME             TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE   SELECTOR
+service/parser   ClusterIP   10.43.139.119   <none>        80/TCP    18h   app=parser
+
+NAME                               CLASS     HOSTS   ADDRESS      PORTS   AGE
+ingress.networking.k8s.io/parser   traefik   *       172.18.0.2   80      18h
+
+NAME                                         REFERENCE           TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+horizontalpodautoscaler.autoscaling/parser   Deployment/parser   cpu: 0%/70%   1         2         2          18h
+
+NAME                          READY   STATUS    RESTARTS   AGE   IP           NODE                     NOMINATED NODE   READINESS GATES
+pod/parser-7bc4d8f796-967j8   1/1     Running   0          16m   10.42.0.42   k3d-cloudproj-server-0   <none>           <none>
+pod/parser-7bc4d8f796-ssmjt   1/1     Running   0          34m   10.42.0.40   k3d-cloudproj-server-0   <none>           <none>
