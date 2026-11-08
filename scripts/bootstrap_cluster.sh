@@ -4,6 +4,14 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 k3d cluster list cloudproj >/dev/null 2>&1 || k3d cluster create --config cluster/k3d.yaml
+# a fresh cluster needs a little time before its API, metrics-server and Traefik answer
+for i in $(seq 1 90); do
+  kubectl get --raw=/readyz >/dev/null 2>&1 && kubectl -n kube-system get deploy traefik metrics-server >/dev/null 2>&1 && break
+  sleep 2
+done
+kubectl wait --for=condition=Ready node --all --timeout=180s
+kubectl -n kube-system rollout status deploy/metrics-server --timeout=180s
+kubectl -n kube-system rollout status deploy/traefik --timeout=180s
 kubectl apply -f k8s/namespaces.yaml
 if ! kubectl -n app get secret s3-credentials >/dev/null 2>&1; then
   AK="seaweed$(openssl rand -hex 6)"
