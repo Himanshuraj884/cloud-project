@@ -1,0 +1,7 @@
+run 1: parser-7bc4d8f796-xrdqm created->Ready 8s
+['INFO:     10.42.0.1:53764 - "GET /readyz HTTP/1.1" 200 OK', 'INFO:     10.42.0.1:53774 - "GET /healthz HTTP/1.1" 200 OK', 'INFO:     10.42.0.1:53788 - "GET /readyz HTTP/1.1" 200 OK']
+run 2: parser-7bc4d8f796-tz5s8 created->Ready 6s
+['INFO:     10.42.0.1:51496 - "GET /readyz HTTP/1.1" 200 OK', 'INFO:     10.42.0.1:51498 - "GET /healthz HTTP/1.1" 200 OK', 'INFO:     10.42.0.1:51506 - "GET /readyz HTTP/1.1" 200 OK']
+run 3: parser-7bc4d8f796-j7b4x created->Ready 8s
+['INFO:service:model v1 loaded, ready', 'INFO:     10.42.0.1:53848 - "GET /readyz HTTP/1.1" 200 OK', 'INFO:     10.42.0.1:53854 - "GET /readyz HTTP/1.1" 200 OK']
+median seconds: 8.0

@@ -4,5 +4,7 @@ INFO:     Application startup complete.
 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
 INFO:botocore.credentials:Found credentials in environment variables.
 INFO:service:downloaded 7 model files from s3://models/v1/
+INFO:     10.42.0.1:53840 - "GET /readyz HTTP/1.1" 503 Service Unavailable
 INFO:service:model v1 loaded, ready
-INFO:     10.42.0.1:39712 - "GET /readyz HTTP/1.1" 200 OK
+INFO:     10.42.0.1:53848 - "GET /readyz HTTP/1.1" 200 OK
+INFO:     10.42.0.1:53854 - "GET /readyz HTTP/1.1" 200 OK
