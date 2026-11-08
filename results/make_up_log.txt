@@ -16,9 +16,117 @@ scripts/up.sh
 [36mINFO[0m[0007] All agents already running.                  
 [36mINFO[0m[0007] Starting helpers...                          
 [36mINFO[0m[0007] Starting node 'k3d-cloudproj-serverlb'       
-[36mINFO[0m[0013] Injecting records for hostAliases (incl. host.k3d.internal) and for 2 network members into CoreDNS configmap... 
+[36mINFO[0m[0014] Injecting records for hostAliases (incl. host.k3d.internal) and for 2 network members into CoreDNS configmap... 
 [36mINFO[0m[0016] Cluster 'cloudproj' created successfully!    
 [36mINFO[0m[0016] You can now use it like this:                
 kubectl cluster-info
-error: error validating "k8s/namespaces.yaml": error validating data: failed to download openapi: the server is currently unable to handle the request; if you choose to ignore these errors, turn validation off with --validate=false
-make: *** [Makefile:7: up] Error 1
+node/k3d-cloudproj-server-0 condition met
+deployment "metrics-server" successfully rolled out
+Waiting for deployment "traefik" rollout to finish: 0 of 1 updated replicas are available...
+deployment "traefik" successfully rolled out
+namespace/data created
+namespace/pipeline created
+namespace/app created
+secret/s3-credentials created
+secret/s3-credentials created
+secret/seaweedfs-s3-config created
+persistentvolumeclaim/seaweedfs-data created
+deployment.apps/seaweedfs created
+service/seaweedfs created
+Waiting for deployment "seaweedfs" rollout to finish: 0 of 1 updated replicas are available...
+deployment "seaweedfs" successfully rolled out
+bucket ok: datasets
+bucket ok: models
+uploaded datasets/commands_pool.jsonl
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  7  215M    7 15.8M    0     0  12.7M      0  0:00:16  0:00:01  0:00:15 12.7M 24  215M   24 52.6M    0     0  23.4M      0  0:00:09  0:00:02  0:00:07 36.8M 40  215M   40 88.2M    0     0  27.2M      0  0:00:07  0:00:03  0:00:04 36.1M 56  215M   56  122M    0     0  28.9M      0  0:00:07  0:00:04  0:00:03 35.5M 73  215M   73  157M    0     0  30.0M      0  0:00:07  0:00:05  0:00:02 35.3M 89  215M   89  193M    0     0  30.9M      0  0:00:06  0:00:06 --:--:-- 35.4M100  215M  100  215M    0     0  31.4M      0  0:00:06  0:00:06 --:--:-- 35.3M
+uploaded models/v1/config.json
+uploaded models/v1/generation_config.json
+uploaded models/v1/model.safetensors
+uploaded models/v1/special_tokens_map.json
+uploaded models/v1/tokenizer.json
+uploaded models/v1/tokenizer_config.json
+uploaded models/v1/version_info.json
+uploaded models/v1/model.sha256
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:06 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:07 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:08 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:09 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:10 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:11 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:12 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:13 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:14 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:15 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:16 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:17 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:18 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:19 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:20 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:21 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:22 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:23 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:24 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:25 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:26 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:27 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:28 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:29 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:30 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:31 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:32 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:33 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:34 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:35 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:36 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:37 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:38 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:39 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:40 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:41 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:42 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:43 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:44 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:45 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:46 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:47 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:48 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:49 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:50 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:51 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:52 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:53 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:54 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:55 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:56 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:57 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:58 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:59 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:00 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:04 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:05 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:06 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:07 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:08 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:09 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:10 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:11 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:12 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:13 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:14 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:15 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:16 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:17 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:18 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:19 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:20 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:21 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:22 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:23 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:24 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:25 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:26 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:27 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:28 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:29 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:30 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:31 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:32 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:33 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:34 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:35 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:36 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:37 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:38 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:39 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:40 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:41 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:42 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:43 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:44 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:45 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:46 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:47 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:48 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:49 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:50 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:51 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:52 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:53 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:54 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:55 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:56 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:57 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:58 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:01:59 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:02:00 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:02:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:02:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:02:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:02:04 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:02:05 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:02:06 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:02:07 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:02:08 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:02:09 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:02:10 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:02:11 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:02:12 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:02:13 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:02:14 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:02:15 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:02:16 --:--:--     0  8  215M    8 18.0M    0     0   135k      0  0:27:15  0:02:17  0:24:58 3997k 26  215M   26 56.8M    0     0   421k      0  0:08:44  0:02:18  0:06:26 12.2M 43  215M   43 92.9M    0     0   683k      0  0:05:23  0:02:19  0:03:04 20.0M 61  215M   61  131M    0     0   962k      0  0:03:49  0:02:20  0:01:29 28.4M 77  215M   77  168M    0     0  1219k      0  0:03:01  0:02:21  0:00:40 35.4M 93  215M   93  202M    0     0  1459k      0  0:02:31  0:02:22  0:00:09 36.9M100  215M  100  215M    0     0  1549k      0  0:02:22  0:02:22 --:--:-- 35.8M
+uploaded models/v2/config.json
+uploaded models/v2/generation_config.json
+uploaded models/v2/model.safetensors
+uploaded models/v2/special_tokens_map.json
+uploaded models/v2/tokenizer.json
+uploaded models/v2/tokenizer_config.json
+uploaded models/v2/version_info.json
+uploaded models/v2/model.sha256
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 678B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11.9-slim
+#2 DONE 4.3s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 113B done
+#3 DONE 0.0s
+
+#4 [1/7] FROM docker.io/library/python:3.11.9-slim@sha256:8fb099199b9f2d70342674bd9dbccd3ed03a258f26bbd1d556822c6dfc60c317
+#4 resolve docker.io/library/python:3.11.9-slim@sha256:8fb099199b9f2d70342674bd9dbccd3ed03a258f26bbd1d556822c6dfc60c317 0.0s done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 9.21kB done
+#5 DONE 0.0s
+
+#6 [2/7] WORKDIR /srv
+#6 CACHED
+
+#7 [5/7] RUN pip install -r service/requirements.txt
+#7 CACHED
+
+#8 [3/7] RUN pip install --index-url https://download.pytorch.org/whl/cpu torch==2.4.1
+#8 CACHED
+
+#9 [4/7] COPY service/requirements.txt service/requirements.txt
+#9 CACHED
+
+#10 [6/7] COPY service/ service/
+#10 CACHED
+
+#11 [7/7] RUN useradd -m app && chown -R app /srv
+#11 CACHED
+
+#12 exporting to image
+#12 exporting layers done
+#12 exporting manifest sha256:a5db3c6820b8e5230416c154277c18aefb5be205e567de398b5abddb4a871158 done
+#12 exporting config sha256:18a30be90cc1a03f38be173977b77280306326d14616e0cce97bcfbea4e4a109
+#12 exporting config sha256:18a30be90cc1a03f38be173977b77280306326d14616e0cce97bcfbea4e4a109 done
+#12 exporting attestation manifest sha256:ca90ac804dba59998a5022fadc54dceaf627149c081bfbe90d6956aa3683bce5 0.0s done
+#12 exporting manifest list sha256:978f10ce92f16d542c23b67c6bf0e37ea5c8ed34e43e0869ff72649f58ed2459 0.0s done
+#12 naming to docker.io/library/parser-service:local done
+#12 unpacking to docker.io/library/parser-service:local 0.0s done
+#12 DONE 0.1s
+[36mINFO[0m[0000] Importing image(s) into cluster 'cloudproj'  
+[36mINFO[0m[0000] Starting new tools node...                   
+[36mINFO[0m[0000] Starting node 'k3d-cloudproj-tools'          
+[36mINFO[0m[0000] Saving 1 image(s) from runtime...            
+[36mINFO[0m[0006] Importing images into nodes...               
+[36mINFO[0m[0006] Importing images from tarball '/k3d/images/k3d-cloudproj-images-20261108172933.tar' into node 'k3d-cloudproj-server-0'... 
+[36mINFO[0m[0035] Removing the tarball(s) from image volume... 
+[36mINFO[0m[0036] Removing k3d-tools node...                   
+[36mINFO[0m[0037] Successfully imported image(s)               
+[36mINFO[0m[0037] Successfully imported 1 image(s) into 1 cluster(s) 
+deployment.apps/parser created
+service/parser created
+ingress.networking.k8s.io/parser created
+horizontalpodautoscaler.autoscaling/parser created
+Waiting for deployment "parser" rollout to finish: 0 out of 2 new replicas have been updated...
+Waiting for deployment "parser" rollout to finish: 0 of 2 updated replicas are available...
+Waiting for deployment "parser" rollout to finish: 1 of 2 updated replicas are available...
+deployment "parser" successfully rolled out
+ready: curl -s -X POST localhost:8080/parse -H 'Content-Type: application/json' -d '{"text":"what is the weather in london"}'
