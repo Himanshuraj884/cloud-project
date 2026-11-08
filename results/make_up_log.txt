@@ -1,0 +1,258 @@
+scripts/up.sh
+[36mINFO[0m[0000] Using config file cluster/k3d.yaml (k3d.io/v1alpha5#simple) 
+[36mINFO[0m[0000] portmapping '8080:80' targets the loadbalancer: defaulting to [servers:*:proxy agents:*:proxy] 
+[36mINFO[0m[0000] Prep: Network                                
+[36mINFO[0m[0000] Created network 'k3d-cloudproj'              
+[36mINFO[0m[0000] Created image volume k3d-cloudproj-images    
+[36mINFO[0m[0000] Starting new tools node...                   
+[36mINFO[0m[0000] Starting node 'k3d-cloudproj-tools'          
+[36mINFO[0m[0001] Creating node 'k3d-cloudproj-server-0'       
+[36mINFO[0m[0001] Creating LoadBalancer 'k3d-cloudproj-serverlb' 
+[36mINFO[0m[0001] Using the k3d-tools node to gather environment information 
+[36mINFO[0m[0001] HostIP: using network gateway 172.18.0.1 address 
+[36mINFO[0m[0001] Starting cluster 'cloudproj'                 
+[36mINFO[0m[0001] Starting servers...                          
+[36mINFO[0m[0001] Starting node 'k3d-cloudproj-server-0'       
+[36mINFO[0m[0007] All agents already running.                  
+[36mINFO[0m[0007] Starting helpers...                          
+[36mINFO[0m[0007] Starting node 'k3d-cloudproj-serverlb'       
+[36mINFO[0m[0013] Injecting records for hostAliases (incl. host.k3d.internal) and for 2 network members into CoreDNS configmap... 
+[36mINFO[0m[0016] Cluster 'cloudproj' created successfully!    
+[36mINFO[0m[0016] You can now use it like this:                
+kubectl cluster-info
+namespace/data created
+namespace/pipeline created
+namespace/app created
+secret/s3-credentials created
+secret/s3-credentials created
+secret/seaweedfs-s3-config created
+persistentvolumeclaim/seaweedfs-data created
+deployment.apps/seaweedfs created
+service/seaweedfs created
+Waiting for deployment "seaweedfs" rollout to finish: 0 of 1 updated replicas are available...
+deployment "seaweedfs" successfully rolled out
+bucket ok: datasets
+bucket ok: models
+uploaded datasets/commands_pool.jsonl
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0  215M    0 42405    0     0   9493      0  6:37:08  0:00:04  6:37:04 60839  5  215M    5 12.6M    0     0  2012k      0  0:01:49  0:00:06  0:01:43 4882k  5  215M    5 12.6M    0     0  1780k      0  0:02:04  0:00:07  0:01:57 3697k  6  215M    6 13.3M    0     0  1839k      0  0:02:00  0:00:07  0:01:53 3720k  9  215M    9 20.0M    0     0  2342k      0  0:01:34  0:00:08  0:01:26 4119k  9  215M    9 20.0M    0     0  2101k      0  0:01:45  0:00:09  0:01:36 3873k  9  215M    9 20.0M    0     0  1906k      0  0:01:55  0:00:10  0:01:45 1748k  9  215M    9 20.0M    0     0  1743k      0  0:02:06  0:00:11  0:01:55 1683k  9  215M    9 20.0M    0     0  1606k      0  0:02:17  0:00:12  0:02:05 1279k  9  215M    9 20.0M    0     0  1489k      0  0:02:28  0:00:13  0:02:15     0  9  215M    9 20.0M    0     0  1388k      0  0:02:39  0:00:14  0:02:25     0  9  215M    9 20.0M    0     0  1300k      0  0:02:49  0:00:15  0:02:34     0 12  215M   12 26.6M    0     0  1659k      0  0:02:13  0:00:16  0:01:57 1450k 14  215M   14 30.2M    0     0  1770k      0  0:02:04  0:00:17  0:01:47 2209k 15  215M   15 34.1M    0     0  1893k      0  0:01:56  0:00:18  0:01:38 3072k 18  215M   18 40.0M    0     0  2096k      0  0:01:45  0:00:19  0:01:26 4266k 18  215M   18 40.0M    0     0  1990k      0  0:01:50  0:00:20  0:01:30 4220k 18  215M   18 40.0M    0     0  1898k      0  0:01:56  0:00:21  0:01:35 2656k 18  215M   18 40.0M    0     0  1814k      0  0:02:01  0:00:22  0:01:39 1962k 18  215M   18 40.0M    0     0  1737k      0  0:02:07  0:00:23  0:01:44 1179k 18  215M   18 40.1M    0     0  1681k      0  0:02:11  0:00:24  0:01:47 25767 22  215M   22 47.4M    0     0  1910k      0  0:01:55  0:00:25  0:01:30 1568k 26  215M   26 56.6M    0     0  2194k      0  0:01:40  0:00:26  0:01:14 3521k 28  215M   28 60.9M    0     0  2271k      0  0:01:37  0:00:27  0:01:10 4414k 31  215M   31 68.6M    0     0  2472k      0  0:01:29  0:00:28  0:01:01 6064k 33  215M   33 71.9M    0     0  2466k      0  0:01:29  0:00:29  0:01:00 6019k 33  215M   33 71.9M    0     0  2406k      0  0:01:31  0:00:30  0:01:01 4857k 35  215M   35 75.8M    0     0  2470k      0  0:01:29  0:00:31  0:00:58 3932k 37  215M   37 80.5M    0     0  2495k      0  0:01:28  0:00:33  0:00:55 3599k 37  215M   37 80.5M    0     0  2422k      0  0:01:31  0:00:34  0:00:57 2169k 37  215M   37 80.5M    0     0  2353k      0  0:01:33  0:00:35  0:00:58 1701k 37  215M   37 80.5M    0     0  2287k      0  0:01:36  0:00:36  0:01:00 1618k 37  215M   37 80.5M    0     0  2226k      0  0:01:39  0:00:37  0:01:02  846k 37  215M   37 80.5M    0     0  2167k      0  0:01:41  0:00:38  0:01:03     0 37  215M   37 80.5M    0     0  2111k      0  0:01:44  0:00:39  0:01:05     0 37  215M   37 80.5M    0     0  2059k      0  0:01:47  0:00:40  0:01:07     0 37  215M   37 80.5M    0     0  2008k      0  0:01:49  0:00:41  0:01:08     0 37  215M   37 80.5M    0     0  1961k      0  0:01:52  0:00:42  0:01:10     0 37  215M   37 80.5M    0     0  1915k      0  0:01:55  0:00:43  0:01:12     0 37  215M   37 80.6M    0     0  1899k      0  0:01:56  0:00:43  0:01:13 22260 39  215M   39 86.0M    0     0  1981k      0  0:01:51  0:00:44  0:01:07 1276k 43  215M   43 92.9M    0     0  2094k      0  0:01:45  0:00:45  0:01:00 2886k 46  215M   46  100M    0     0  2222k      0  0:01:39  0:00:46  0:00:53 4713k 47  215M   47  102M    0     0  2220k      0  0:01:39  0:00:47  0:00:52 5191k 49  215M   49  107M    0     0  2262k      0  0:01:37  0:00:48  0:00:49 5415k 52  215M   52  112M    0     0  2325k      0  0:01:34  0:00:49  0:00:45 5392k 54  215M   54  118M    0     0  2406k      0  0:01:31  0:00:50  0:00:41 5253k 58  215M   58  125M    0     0  2492k      0  0:01:28  0:00:51  0:00:37 5001k 61  215M   61  132M    0     0  2585k      0  0:01:25  0:00:52  0:00:33 6050k 64  215M   64  138M    0     0  2655k      0  0:01:23  0:00:53  0:00:30 6460k 65  215M   65  141M    0     0  2654k      0  0:01:23  0:00:54  0:00:29 5907k 67  215M   67  144M    0     0  2670k      0  0:01:22  0:00:55  0:00:27 5331k 69  215M   69  149M    0     0  2704k      0  0:01:21  0:00:56  0:00:25 4880k 71  215M   71  153M    0     0  2739k      0  0:01:20  0:00:57  0:00:23 4360k 73  215M   73  158M    0     0  2777k      0  0:01:19  0:00:58  0:00:21 4084k 75  215M   75  162M    0     0  2790k      0  0:01:19  0:00:59  0:00:20 4278k 77  215M   77  167M    0     0  2829k      0  0:01:18  0:01:00  0:00:18 4594k 79  215M   79  171M    0     0  2852k      0  0:01:17  0:01:01  0:00:16 4530k 81  215M   81  176M    0     0  2890k      0  0:01:16  0:01:02  0:00:14 4626k 83  215M   83  180M    0     0  2916k      0  0:01:15  0:01:03  0:00:12 4546k 86  215M   86  185M    0     0  2954k      0  0:01:14  0:01:04  0:00:10 4900k 88  215M   88  190M    0     0  2945k      0  0:01:14  0:01:06  0:00:08 4197k 88  215M   88  190M    0     0  2901k      0  0:01:16  0:01:07  0:00:09 3441k 88  215M   88  190M    0     0  2859k      0  0:01:17  0:01:08  0:00:09 2504k 88  215M   88  190M    0     0  2817k      0  0:01:18  0:01:09  0:00:09 1692k 88  215M   88  190M    0     0  2799k      0  0:01:18  0:01:09  0:00:09  818k 89  215M   89  193M    0     0  2810k      0  0:01:18  0:01:10  0:00:08  784k 92  215M   92  198M    0     0  2851k      0  0:01:17  0:01:11  0:00:06 2088k 95  215M   95  205M    0     0  2903k      0  0:01:16  0:01:12  0:00:04 3592k 98  215M   98  212M    0     0  2961k      0  0:01:14  0:01:13  0:00:01 5222k100  215M  100  215M    0     0  2988k      0  0:01:13  0:01:13 --:--:-- 5988k
+uploaded models/v1/config.json
+uploaded models/v1/generation_config.json
+uploaded models/v1/model.safetensors
+uploaded models/v1/special_tokens_map.json
+uploaded models/v1/tokenizer.json
+uploaded models/v1/tokenizer_config.json
+uploaded models/v1/version_info.json
+uploaded models/v1/model.sha256
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:06 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:07 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:08 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:09 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:10 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:11 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:12 --:--:--     0  0  215M    0  111k    0     0   8703      0  7:13:15  0:00:13  7:13:02 23041  4  215M    4 10.0M    0     0   704k      0  0:05:13  0:00:14  0:04:59 1918k  4  215M    4 10.0M    0     0   658k      0  0:05:35  0:00:15  0:05:20 1918k  4  215M    4 10.0M    0     0   619k      0  0:05:56  0:00:16  0:05:40 1918k  4  215M    4 10.0M    0     0   591k      0  0:06:13  0:00:17  0:05:56 1994k 11  215M   11 24.4M    0     0  1377k      0  0:02:40  0:00:18  0:02:22 4985k 18  215M   18 40.0M    0     0  2084k      0  0:01:46  0:00:19  0:01:27 5994k 18  215M   18 40.9M    0     0  2078k      0  0:01:46  0:00:20  0:01:26 6827k 28  215M   28 62.4M    0     0  3017k      0  0:01:13  0:00:21  0:00:52 11.3M 32  215M   32 70.0M    0     0  3196k      0  0:01:09  0:00:22  0:00:47 11.8M 32  215M   32 70.0M    0     0  3059k      0  0:01:12  0:00:23  0:00:49 8884k 32  215M   32 70.0M    0     0  2934k      0  0:01:15  0:00:24  0:00:51 6448k 32  215M   32 70.0M    0     0  2818k      0  0:01:18  0:00:25  0:00:53 5669k 32  215M   32 71.0M    0     0  2778k      0  0:01:19  0:00:26  0:00:53 1766k 42  215M   42 91.6M    0     0  3453k      0  0:01:03  0:00:27  0:00:36 4663k 50  215M   50  109M    0     0  3984k      0  0:00:55  0:00:28  0:00:27 8541k 50  215M   50  110M    0     0  3857k      0  0:00:57  0:00:29  0:00:28 8587k 50  215M   50  110M    0     0  3730k      0  0:00:59  0:00:30  0:00:29 8587k 50  215M   50  110M    0     0  3610k      0  0:01:01  0:00:31  0:00:30 7961k 50  215M   50  110M    0     0  3498k      0  0:01:03  0:00:32  0:00:31 3741k 55  215M   55  119M    0     0  3675k      0  0:01:00  0:00:33  0:00:27 1942k 66  215M   66  143M    0     0  4290k      0  0:00:51  0:00:34  0:00:17 6829k 76  215M   76  165M    0     0  4813k      0  0:00:45  0:00:35  0:00:10 11.1M 88  215M   88  190M    0     0  5382k      0  0:00:41  0:00:36  0:00:05 16.1M 92  215M   92  200M    0     0  5445k      0  0:00:40  0:00:37  0:00:03 16.6M 92  215M   92  200M    0     0  5304k      0  0:00:41  0:00:38  0:00:03 14.9M 92  215M   92  200M    0     0  5188k      0  0:00:42  0:00:39  0:00:03 10.7M 97  215M   97  210M    0     0  5222k      0  0:00:42  0:00:41  0:00:01 7626k 97  215M   97  210M    0     0  5145k      0  0:00:42  0:00:41  0:00:01 3620k 98  215M   98  211M    0     0  5144k      0  0:00:42  0:00:42 --:--:-- 2671k100  215M  100  215M    0     0  5208k      0  0:00:42  0:00:42 --:--:-- 4239k
+uploaded models/v2/config.json
+uploaded models/v2/generation_config.json
+uploaded models/v2/model.safetensors
+uploaded models/v2/special_tokens_map.json
+uploaded models/v2/tokenizer.json
+uploaded models/v2/tokenizer_config.json
+uploaded models/v2/version_info.json
+uploaded models/v2/model.sha256
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 678B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.11.9-slim
+#2 DONE 1.9s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 113B done
+#3 DONE 0.0s
+
+#4 [1/7] FROM docker.io/library/python:3.11.9-slim@sha256:8fb099199b9f2d70342674bd9dbccd3ed03a258f26bbd1d556822c6dfc60c317
+#4 resolve docker.io/library/python:3.11.9-slim@sha256:8fb099199b9f2d70342674bd9dbccd3ed03a258f26bbd1d556822c6dfc60c317 0.0s done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 9.21kB done
+#5 DONE 0.0s
+
+#6 [2/7] WORKDIR /srv
+#6 CACHED
+
+#7 [3/7] RUN pip install --index-url https://download.pytorch.org/whl/cpu torch==2.4.1
+#7 CACHED
+
+#8 [4/7] COPY service/requirements.txt service/requirements.txt
+#8 DONE 0.2s
+
+#9 [5/7] RUN pip install -r service/requirements.txt
+#9 2.170 Collecting fastapi==0.115.0 (from -r service/requirements.txt (line 2))
+#9 2.341   Downloading fastapi-0.115.0-py3-none-any.whl.metadata (27 kB)
+#9 2.450 Collecting uvicorn==0.30.6 (from -r service/requirements.txt (line 3))
+#9 2.485   Downloading uvicorn-0.30.6-py3-none-any.whl.metadata (6.6 kB)
+#9 2.614 Collecting transformers==4.44.2 (from -r service/requirements.txt (line 4))
+#9 2.647   Downloading transformers-4.44.2-py3-none-any.whl.metadata (43 kB)
+#9 2.684      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.7/43.7 kB 1.2 MB/s eta 0:00:00
+#9 2.935 Collecting tokenizers==0.19.1 (from -r service/requirements.txt (line 5))
+#9 2.968   Downloading tokenizers-0.19.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.7 kB)
+#9 3.148 Collecting huggingface-hub==0.25.2 (from -r service/requirements.txt (line 6))
+#9 3.181   Downloading huggingface_hub-0.25.2-py3-none-any.whl.metadata (13 kB)
+#9 3.393 Collecting safetensors==0.4.5 (from -r service/requirements.txt (line 7))
+#9 3.428   Downloading safetensors-0.4.5-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)
+#9 3.762 Collecting numpy==1.26.4 (from -r service/requirements.txt (line 8))
+#9 3.795   Downloading numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+#9 3.807      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.0/61.0 kB 7.1 MB/s eta 0:00:00
+#9 4.393 Collecting boto3==1.35.30 (from -r service/requirements.txt (line 9))
+#9 4.428   Downloading boto3-1.35.30-py3-none-any.whl.metadata (6.6 kB)
+#9 4.540 Collecting starlette<0.39.0,>=0.37.2 (from fastapi==0.115.0->-r service/requirements.txt (line 2))
+#9 4.573   Downloading starlette-0.38.6-py3-none-any.whl.metadata (6.0 kB)
+#9 4.796 Collecting pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4 (from fastapi==0.115.0->-r service/requirements.txt (line 2))
+#9 4.831   Downloading pydantic-2.14.3-py3-none-any.whl.metadata (141 kB)
+#9 4.862      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 141.5/141.5 kB 5.4 MB/s eta 0:00:00
+#9 4.872 Requirement already satisfied: typing-extensions>=4.8.0 in /usr/local/lib/python3.11/site-packages (from fastapi==0.115.0->-r service/requirements.txt (line 2)) (4.16.0)
+#9 5.055 Collecting click>=7.0 (from uvicorn==0.30.6->-r service/requirements.txt (line 3))
+#9 5.086   Downloading click-8.5.1-py3-none-any.whl.metadata (2.6 kB)
+#9 5.141 Collecting h11>=0.8 (from uvicorn==0.30.6->-r service/requirements.txt (line 3))
+#9 5.172   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#9 5.366 Requirement already satisfied: filelock in /usr/local/lib/python3.11/site-packages (from transformers==4.44.2->-r service/requirements.txt (line 4)) (4.2.4)
+#9 5.455 Collecting packaging>=20.0 (from transformers==4.44.2->-r service/requirements.txt (line 4))
+#9 5.488   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+#9 5.579 Collecting pyyaml>=5.1 (from transformers==4.44.2->-r service/requirements.txt (line 4))
+#9 5.611   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#9 6.219 Collecting regex!=2019.12.17 (from transformers==4.44.2->-r service/requirements.txt (line 4))
+#9 6.252   Downloading regex-2026.11.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+#9 6.255      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.5/40.5 kB 226.6 MB/s eta 0:00:00
+#9 6.329 Collecting requests (from transformers==4.44.2->-r service/requirements.txt (line 4))
+#9 6.361   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+#9 6.479 Collecting tqdm>=4.27 (from transformers==4.44.2->-r service/requirements.txt (line 4))
+#9 6.514   Downloading tqdm-4.70.1-py3-none-any.whl.metadata (57 kB)
+#9 6.519      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.4/57.4 kB 77.6 MB/s eta 0:00:00
+#9 6.609 Requirement already satisfied: fsspec>=2023.5.0 in /usr/local/lib/python3.11/site-packages (from huggingface-hub==0.25.2->-r service/requirements.txt (line 6)) (2026.9.0)
+#9 7.410 Collecting botocore<1.36.0,>=1.35.30 (from boto3==1.35.30->-r service/requirements.txt (line 9))
+#9 7.444   Downloading botocore-1.35.99-py3-none-any.whl.metadata (5.7 kB)
+#9 7.497 Collecting jmespath<2.0.0,>=0.7.1 (from boto3==1.35.30->-r service/requirements.txt (line 9))
+#9 7.530   Downloading jmespath-1.1.0-py3-none-any.whl.metadata (7.6 kB)
+#9 7.601 Collecting s3transfer<0.11.0,>=0.10.0 (from boto3==1.35.30->-r service/requirements.txt (line 9))
+#9 7.633   Downloading s3transfer-0.10.4-py3-none-any.whl.metadata (1.7 kB)
+#9 7.701 Collecting python-dateutil<3.0.0,>=2.1 (from botocore<1.36.0,>=1.35.30->boto3==1.35.30->-r service/requirements.txt (line 9))
+#9 7.734   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#9 7.833 Collecting urllib3!=2.2.0,<3,>=1.25.4 (from botocore<1.36.0,>=1.35.30->boto3==1.35.30->-r service/requirements.txt (line 9))
+#9 7.865   Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+#9 7.987 Collecting annotated-types>=0.6.0 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi==0.115.0->-r service/requirements.txt (line 2))
+#9 8.019   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+#9 9.008 Collecting pydantic-core==2.50.4 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi==0.115.0->-r service/requirements.txt (line 2))
+#9 9.044   Downloading pydantic_core-2.50.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.6 kB)
+#9 9.095 Collecting typing-inspection>=0.4.4 (from pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4->fastapi==0.115.0->-r service/requirements.txt (line 2))
+#9 9.127   Downloading typing_inspection-0.4.5-py3-none-any.whl.metadata (2.6 kB)
+#9 9.395 Collecting anyio<5,>=3.4.0 (from starlette<0.39.0,>=0.37.2->fastapi==0.115.0->-r service/requirements.txt (line 2))
+#9 9.427   Downloading anyio-4.16.0-py3-none-any.whl.metadata (4.7 kB)
+#9 9.659 Collecting charset_normalizer<4,>=2 (from requests->transformers==4.44.2->-r service/requirements.txt (line 4))
+#9 9.698   Downloading charset_normalizer-3.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+#9 9.702      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.4/46.4 kB 98.6 MB/s eta 0:00:00
+#9 9.766 Collecting idna<4,>=2.5 (from requests->transformers==4.44.2->-r service/requirements.txt (line 4))
+#9 9.798   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+#9 9.881 Collecting certifi>=2023.5.7 (from requests->transformers==4.44.2->-r service/requirements.txt (line 4))
+#9 9.913   Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+#9 10.02 Collecting six>=1.5 (from python-dateutil<3.0.0,>=2.1->botocore<1.36.0,>=1.35.30->boto3==1.35.30->-r service/requirements.txt (line 9))
+#9 10.05   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#9 10.12 Downloading fastapi-0.115.0-py3-none-any.whl (94 kB)
+#9 10.13    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 94.6/94.6 kB 96.0 MB/s eta 0:00:00
+#9 10.16 Downloading uvicorn-0.30.6-py3-none-any.whl (62 kB)
+#9 10.17    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.8/62.8 kB 86.2 MB/s eta 0:00:00
+#9 10.20 Downloading transformers-4.44.2-py3-none-any.whl (9.5 MB)
+#9 11.45    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.5/9.5 MB 7.6 MB/s eta 0:00:00
+#9 11.78 Downloading tokenizers-0.19.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.6 MB)
+#9 11.95    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 21.4 MB/s eta 0:00:00
+#9 11.98 Downloading huggingface_hub-0.25.2-py3-none-any.whl (436 kB)
+#9 12.00    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 436.6/436.6 kB 35.4 MB/s eta 0:00:00
+#9 12.03 Downloading safetensors-0.4.5-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (435 kB)
+#9 12.06    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 435.0/435.0 kB 31.5 MB/s eta 0:00:00
+#9 12.09 Downloading numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.3 MB)
+#9 12.68    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.3/18.3 MB 32.0 MB/s eta 0:00:00
+#9 12.72 Downloading boto3-1.35.30-py3-none-any.whl (139 kB)
+#9 12.73    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 139.1/139.1 kB 25.9 MB/s eta 0:00:00
+#9 12.76 Downloading botocore-1.35.99-py3-none-any.whl (13.3 MB)
+#9 13.33    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.3/13.3 MB 21.3 MB/s eta 0:00:00
+#9 13.36 Downloading click-8.5.1-py3-none-any.whl (126 kB)
+#9 13.37    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 126.2/126.2 kB 51.9 MB/s eta 0:00:00
+#9 13.40 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#9 13.43 Downloading jmespath-1.1.0-py3-none-any.whl (20 kB)
+#9 13.47 Downloading packaging-26.3-py3-none-any.whl (129 kB)
+#9 13.47    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 130.0/130.0 kB 211.0 MB/s eta 0:00:00
+#9 13.51 Downloading pydantic-2.14.3-py3-none-any.whl (494 kB)
+#9 13.53    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 494.1/494.1 kB 27.6 MB/s eta 0:00:00
+#9 13.57 Downloading pydantic_core-2.50.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (2.3 MB)
+#9 13.64    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 31.8 MB/s eta 0:00:00
+#9 13.67 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+#9 13.70    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 35.6 MB/s eta 0:00:00
+#9 13.73 Downloading regex-2026.11.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (805 kB)
+#9 13.75    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 805.6/805.6 kB 49.5 MB/s eta 0:00:00
+#9 13.80 Downloading s3transfer-0.10.4-py3-none-any.whl (83 kB)
+#9 13.80    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.2/83.2 kB 174.1 MB/s eta 0:00:00
+#9 13.84 Downloading starlette-0.38.6-py3-none-any.whl (71 kB)
+#9 13.85    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.5/71.5 kB 13.8 MB/s eta 0:00:00
+#9 13.88 Downloading tqdm-4.70.1-py3-none-any.whl (80 kB)
+#9 13.89    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.2/80.2 kB 211.6 MB/s eta 0:00:00
+#9 13.92 Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+#9 13.92    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.1/73.1 kB 257.9 MB/s eta 0:00:00
+#9 13.96 Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+#9 13.98 Downloading anyio-4.16.0-py3-none-any.whl (134 kB)
+#9 14.00    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.5/134.5 kB 34.2 MB/s eta 0:00:00
+#9 14.03 Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+#9 14.03    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 135.1/135.1 kB 263.9 MB/s eta 0:00:00
+#9 14.06 Downloading charset_normalizer-3.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (269 kB)
+#9 14.07    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 270.0/270.0 kB 44.1 MB/s eta 0:00:00
+#9 14.10 Downloading idna-3.20-py3-none-any.whl (69 kB)
+#9 14.11    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.6/69.6 kB 94.9 MB/s eta 0:00:00
+#9 14.14 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#9 14.15    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 63.5 MB/s eta 0:00:00
+#9 14.18 Downloading typing_inspection-0.4.5-py3-none-any.whl (14 kB)
+#9 14.21 Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+#9 14.22    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 135.7/135.7 kB 110.1 MB/s eta 0:00:00
+#9 14.25 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#9 14.83 Installing collected packages: urllib3, typing-inspection, tqdm, six, safetensors, regex, pyyaml, pydantic-core, packaging, numpy, jmespath, idna, h11, click, charset_normalizer, certifi, annotated-types, uvicorn, requests, python-dateutil, pydantic, anyio, starlette, huggingface-hub, botocore, tokenizers, s3transfer, fastapi, transformers, boto3
+#9 22.12 Successfully installed annotated-types-0.8.0 anyio-4.16.0 boto3-1.35.30 botocore-1.35.99 certifi-2026.10.23 charset_normalizer-3.5.2 click-8.5.1 fastapi-0.115.0 h11-0.16.0 huggingface-hub-0.25.2 idna-3.20 jmespath-1.1.0 numpy-1.26.4 packaging-26.3 pydantic-2.14.3 pydantic-core-2.50.4 python-dateutil-2.9.0.post0 pyyaml-6.0.3 regex-2026.11.7 requests-2.34.2 s3transfer-0.10.4 safetensors-0.4.5 six-1.17.0 starlette-0.38.6 tokenizers-0.19.1 tqdm-4.70.1 transformers-4.44.2 typing-inspection-0.4.5 urllib3-2.8.0 uvicorn-0.30.6
+#9 22.12 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 22.44 
+#9 22.44 [notice] A new release of pip is available: 24.0 -> 26.3
+#9 22.44 [notice] To update, run: pip install --upgrade pip
+#9 DONE 23.8s
+
+#10 [6/7] COPY service/ service/
+#10 DONE 0.1s
+
+#11 [7/7] RUN useradd -m app && chown -R app /srv
+#11 DONE 0.4s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 10.6s done
+#12 exporting manifest sha256:a5db3c6820b8e5230416c154277c18aefb5be205e567de398b5abddb4a871158 0.0s done
+#12 exporting config sha256:18a30be90cc1a03f38be173977b77280306326d14616e0cce97bcfbea4e4a109 0.0s done
+#12 exporting attestation manifest sha256:410ff98bcab264892e9b170d41ecd56e034e71e07ce4fc9920b9cf1834a376de 0.0s done
+#12 exporting manifest list sha256:799ee70c8f1d3078727571ef9b6a44873787d02ef0fc78e89e16266acb2e7ab1 0.0s done
+#12 naming to docker.io/library/parser-service:local done
+#12 unpacking to docker.io/library/parser-service:local
+#12 unpacking to docker.io/library/parser-service:local 2.5s done
+#12 DONE 13.2s
+[36mINFO[0m[0000] Importing image(s) into cluster 'cloudproj'  
+[36mINFO[0m[0000] Starting new tools node...                   
+[36mINFO[0m[0000] Starting node 'k3d-cloudproj-tools'          
+[36mINFO[0m[0000] Saving 1 image(s) from runtime...            
+[36mINFO[0m[0007] Importing images into nodes...               
+[36mINFO[0m[0007] Importing images from tarball '/k3d/images/k3d-cloudproj-images-20261108171206.tar' into node 'k3d-cloudproj-server-0'... 
+[36mINFO[0m[0021] Removing the tarball(s) from image volume... 
+[36mINFO[0m[0022] Removing k3d-tools node...                   
+[36mINFO[0m[0023] Successfully imported image(s)               
+[36mINFO[0m[0023] Successfully imported 1 image(s) into 1 cluster(s) 
+deployment.apps/parser created
+service/parser created
+ingress.networking.k8s.io/parser created
+horizontalpodautoscaler.autoscaling/parser created
+Waiting for deployment "parser" rollout to finish: 0 of 2 updated replicas are available...
+Waiting for deployment "parser" rollout to finish: 1 of 2 updated replicas are available...
+deployment "parser" successfully rolled out
+ready: curl -s -X POST localhost:8080/parse -H 'Content-Type: application/json' -d '{"text":"what is the weather in london"}'
